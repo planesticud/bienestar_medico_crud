@@ -1,0 +1,75 @@
+kind: pipeline
+name: bienestar_medico_crud
+
+workspace:
+  base: /go
+  path: src/github.com/planesticud/${DRONE_REPO##planesticud/}
+  when:
+    branch: 
+    - master
+    - develop
+    event:
+    - push
+    
+steps:
+- name: build
+  image: golang:1.9
+  commands:
+  - go mod init
+  - go get -t
+  - GOOS=linux GOARCH=amd64 go build -o main
+  - go get -u gopkg.in/alecthomas/gometalinter.v1
+  - gometalinter.v1 --install     
+  when:
+    branch: 
+    - master
+    - develop
+    event:
+    - push
+            
+- name: publish-dockerhub  
+  image: plugins/docker
+  settings:
+    username:
+      from_secret: usdocker
+    password:
+      from_secret: psdocker
+    repo: planesticud/${DRONE_REPO##planesticud/}
+    tags:
+    - ${DRONE_COMMIT:0:7}
+    - latest
+  when:
+    branch: 
+    - master
+    - develop
+    event:
+    - push
+
+- name: notify
+  image: appleboy/drone-telegram
+  settings:
+    token:
+      from_secret: telegram2
+    to:
+      from_secret: id2
+    format: html
+    message: >
+      {{#success build.status}}
+        ✅ <a href="{{build.link}}">SUCCESS</a> <b>Build #{{build.number}}</b>
+        <b>type: </b><code>{{ build.event }}</code>
+        <b>Repo: </b><code>{{repo.name}}</code>
+        <b>Branch: </b><code>{{commit.branch}}</code>
+        <b>Commit: </b><a href="{{commit.link}}">{{truncate commit.sha 7}}</a>
+        <b>Autor: </b>{{commit.author}} <code>&#128526 </code>
+      {{else}}
+        ❌ <a href="{{build.link}}">FAILURE</a> <b>Build #{{build.number}}</b>
+        <b>type: </b><code>{{ build.event }}</code>
+        <b>Repo: </b><code>{{repo.name}}</code>
+        <b>Branch: </b><code>{{commit.branch}}</code>
+        <b>Commit: </b><a href="{{commit.link}}">{{truncate commit.sha 7}}</a>
+        <b>Autor: </b>{{commit.author}} <code>&#128549 </code>
+      {{/success}}
+  when:
+    status:
+    - failure
+    - success
