@@ -1,7 +1,6 @@
 CREATE SCHEMA bienestar_medico;
 
 
-ALTER SCHEMA bienestar_medico OWNER TO postgres;
 
 --
 -- TOC entry 9 (class 2615 OID 53192)
@@ -11,7 +10,6 @@ ALTER SCHEMA bienestar_medico OWNER TO postgres;
 CREATE SCHEMA bienestar_solicitud;
 
 
-ALTER SCHEMA bienestar_solicitud OWNER TO postgres;
 
 --
 -- TOC entry 218 (class 1259 OID 53345)
@@ -26,7 +24,6 @@ CREATE SEQUENCE bienestar_medico.acceso_historia_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.acceso_historia_id_seq OWNER TO postgres;
 
 SET default_tablespace = '';
 
@@ -45,7 +42,6 @@ CREATE TABLE bienestar_medico.acceso_historia (
 );
 
 
-ALTER TABLE bienestar_medico.acceso_historia OWNER TO postgres;
 
 --
 -- TOC entry 220 (class 1259 OID 53354)
@@ -60,7 +56,6 @@ CREATE SEQUENCE bienestar_medico.anamnesis_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.anamnesis_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 221 (class 1259 OID 53356)
@@ -96,7 +91,6 @@ CREATE TABLE bienestar_medico.anamnesis (
 );
 
 
-ALTER TABLE bienestar_medico.anamnesis OWNER TO postgres;
 
 --
 -- TOC entry 222 (class 1259 OID 53365)
@@ -111,7 +105,6 @@ CREATE SEQUENCE bienestar_medico.antecedente_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.antecedente_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 223 (class 1259 OID 53367)
@@ -128,7 +121,7 @@ CREATE TABLE bienestar_medico.antecedente (
 );
 
 
-ALTER TABLE bienestar_medico.antecedente OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.antecedente OWNER TO postgres;
 
 --
 -- TOC entry 224 (class 1259 OID 53376)
@@ -143,7 +136,6 @@ CREATE SEQUENCE bienestar_medico.antecedente_psicologico_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.antecedente_psicologico_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 225 (class 1259 OID 53378)
@@ -161,7 +153,6 @@ CREATE TABLE bienestar_medico.antecedente_psicologico (
 );
 
 
-ALTER TABLE bienestar_medico.antecedente_psicologico OWNER TO postgres;
 
 --
 -- TOC entry 226 (class 1259 OID 53387)
@@ -176,7 +167,6 @@ CREATE SEQUENCE bienestar_medico.comportamiento_consulta_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.comportamiento_consulta_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 227 (class 1259 OID 53389)
@@ -194,7 +184,6 @@ CREATE TABLE bienestar_medico.comportamiento_consulta (
 );
 
 
-ALTER TABLE bienestar_medico.comportamiento_consulta OWNER TO postgres;
 
 --
 -- TOC entry 228 (class 1259 OID 53398)
@@ -209,7 +198,6 @@ CREATE SEQUENCE bienestar_medico.composicion_familiar_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.composicion_familiar_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 229 (class 1259 OID 53400)
@@ -225,7 +213,6 @@ CREATE TABLE bienestar_medico.composicion_familiar (
 );
 
 
-ALTER TABLE bienestar_medico.composicion_familiar OWNER TO postgres;
 
 --
 -- TOC entry 230 (class 1259 OID 53409)
@@ -240,7 +227,6 @@ CREATE SEQUENCE bienestar_medico.control_placa_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.control_placa_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 231 (class 1259 OID 53411)
@@ -259,7 +245,6 @@ CREATE TABLE bienestar_medico.control_placa (
 );
 
 
-ALTER TABLE bienestar_medico.control_placa OWNER TO postgres;
 
 --
 -- TOC entry 232 (class 1259 OID 53420)
@@ -274,7 +259,6 @@ CREATE SEQUENCE bienestar_medico.convencion_odontograma_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.convencion_odontograma_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 233 (class 1259 OID 53422)
@@ -294,7 +278,7 @@ CREATE TABLE bienestar_medico.convencion_odontograma (
 );
 
 
-ALTER TABLE bienestar_medico.convencion_odontograma OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.convencion_odontograma OWNER TO postgres;
 
 --
 -- TOC entry 234 (class 1259 OID 53428)
@@ -309,7 +293,6 @@ CREATE SEQUENCE bienestar_medico.datos_emergencia_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.datos_emergencia_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 235 (class 1259 OID 53430)
@@ -328,7 +311,6 @@ CREATE TABLE bienestar_medico.datos_emergencia (
 );
 
 
-ALTER TABLE bienestar_medico.datos_emergencia OWNER TO postgres;
 
 --
 -- TOC entry 236 (class 1259 OID 53439)
@@ -343,7 +325,6 @@ CREATE SEQUENCE bienestar_medico.diagnostico_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.diagnostico_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 237 (class 1259 OID 53441)
@@ -362,7 +343,6 @@ CREATE TABLE bienestar_medico.diagnostico (
 );
 
 
-ALTER TABLE bienestar_medico.diagnostico OWNER TO postgres;
 
 --
 -- TOC entry 238 (class 1259 OID 53450)
@@ -377,7 +357,6 @@ CREATE SEQUENCE bienestar_medico.especialidad_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.especialidad_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 239 (class 1259 OID 53452)
@@ -397,7 +376,6 @@ CREATE TABLE bienestar_medico.especialidad (
 );
 
 
-ALTER TABLE bienestar_medico.especialidad OWNER TO postgres;
 
 --
 -- TOC entry 240 (class 1259 OID 53458)
@@ -412,7 +390,6 @@ CREATE SEQUENCE bienestar_medico.examen_dental_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.examen_dental_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 241 (class 1259 OID 53460)
@@ -436,7 +413,6 @@ CREATE TABLE bienestar_medico.examen_dental (
 );
 
 
-ALTER TABLE bienestar_medico.examen_dental OWNER TO postgres;
 
 --
 -- TOC entry 242 (class 1259 OID 53469)
@@ -451,7 +427,6 @@ CREATE SEQUENCE bienestar_medico.examen_estomatologico_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.examen_estomatologico_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 243 (class 1259 OID 53471)
@@ -480,7 +455,6 @@ CREATE TABLE bienestar_medico.examen_estomatologico (
 );
 
 
-ALTER TABLE bienestar_medico.examen_estomatologico OWNER TO postgres;
 
 --
 -- TOC entry 244 (class 1259 OID 53480)
@@ -495,7 +469,7 @@ CREATE SEQUENCE bienestar_medico.excusa_medica_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.excusa_medica_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.excusa_medica_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 245 (class 1259 OID 53482)
@@ -511,7 +485,7 @@ CREATE TABLE bienestar_medico.excusa_medica (
 );
 
 
-ALTER TABLE bienestar_medico.excusa_medica OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.excusa_medica OWNER TO postgres;
 
 --
 -- TOC entry 246 (class 1259 OID 53488)
@@ -526,7 +500,7 @@ CREATE SEQUENCE bienestar_medico.historia_clinica_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.historia_clinica_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.historia_clinica_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 247 (class 1259 OID 53490)
@@ -541,7 +515,7 @@ CREATE TABLE bienestar_medico.historia_clinica (
 );
 
 
-ALTER TABLE bienestar_medico.historia_clinica OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.historia_clinica OWNER TO postgres;
 
 --
 -- TOC entry 248 (class 1259 OID 53496)
@@ -556,7 +530,7 @@ CREATE SEQUENCE bienestar_medico.hoja_historia_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.hoja_historia_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.hoja_historia_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 249 (class 1259 OID 53498)
@@ -579,7 +553,7 @@ CREATE TABLE bienestar_medico.hoja_historia (
 );
 
 
-ALTER TABLE bienestar_medico.hoja_historia OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.hoja_historia OWNER TO postgres;
 
 --
 -- TOC entry 250 (class 1259 OID 53507)
@@ -594,7 +568,7 @@ CREATE SEQUENCE bienestar_medico.limites_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.limites_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.limites_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 251 (class 1259 OID 53509)
@@ -612,7 +586,7 @@ CREATE TABLE bienestar_medico.limites (
 );
 
 
-ALTER TABLE bienestar_medico.limites OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.limites OWNER TO postgres;
 
 --
 -- TOC entry 252 (class 1259 OID 53518)
@@ -627,7 +601,7 @@ CREATE SEQUENCE bienestar_medico.odontograma_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.odontograma_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.odontograma_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 253 (class 1259 OID 53520)
@@ -644,7 +618,7 @@ CREATE TABLE bienestar_medico.odontograma (
 );
 
 
-ALTER TABLE bienestar_medico.odontograma OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.odontograma OWNER TO postgres;
 
 --
 -- TOC entry 254 (class 1259 OID 53529)
@@ -659,7 +633,7 @@ CREATE SEQUENCE bienestar_medico.orden_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.orden_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.orden_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 255 (class 1259 OID 53531)
@@ -675,7 +649,7 @@ CREATE TABLE bienestar_medico.orden (
 );
 
 
-ALTER TABLE bienestar_medico.orden OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.orden OWNER TO postgres;
 
 --
 -- TOC entry 256 (class 1259 OID 53540)
@@ -690,7 +664,7 @@ CREATE SEQUENCE bienestar_medico.persona_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.persona_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.persona_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 257 (class 1259 OID 53542)
@@ -718,7 +692,7 @@ CREATE TABLE bienestar_medico.persona (
 );
 
 
-ALTER TABLE bienestar_medico.persona OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.persona OWNER TO postgres;
 
 --
 -- TOC entry 258 (class 1259 OID 53549)
@@ -733,7 +707,7 @@ CREATE SEQUENCE bienestar_medico.remision_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.remision_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.remision_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 259 (class 1259 OID 53551)
@@ -750,7 +724,7 @@ CREATE TABLE bienestar_medico.remision (
 );
 
 
-ALTER TABLE bienestar_medico.remision OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.remision OWNER TO postgres;
 
 --
 -- TOC entry 260 (class 1259 OID 53560)
@@ -765,7 +739,7 @@ CREATE SEQUENCE bienestar_medico.signos_vitales_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.signos_vitales_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.signos_vitales_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 261 (class 1259 OID 53562)
@@ -791,7 +765,7 @@ CREATE TABLE bienestar_medico.signos_vitales (
 );
 
 
-ALTER TABLE bienestar_medico.signos_vitales OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.signos_vitales OWNER TO postgres;
 
 --
 -- TOC entry 262 (class 1259 OID 53568)
@@ -810,7 +784,7 @@ CREATE TABLE bienestar_medico.tipo_antecedente (
 );
 
 
-ALTER TABLE bienestar_medico.tipo_antecedente OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.tipo_antecedente OWNER TO postgres;
 
 --
 -- TOC entry 263 (class 1259 OID 53573)
@@ -826,7 +800,7 @@ CREATE SEQUENCE bienestar_medico.tipo_antecedente_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.tipo_antecedente_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.tipo_antecedente_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 3454 (class 0 OID 0)
@@ -850,7 +824,7 @@ CREATE SEQUENCE bienestar_medico.tipo_antecedente_psicologico_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.tipo_antecedente_psicologico_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.tipo_antecedente_psicologico_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 265 (class 1259 OID 53577)
@@ -869,7 +843,7 @@ CREATE TABLE bienestar_medico.tipo_antecedente_psicologico (
 );
 
 
-ALTER TABLE bienestar_medico.tipo_antecedente_psicologico OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.tipo_antecedente_psicologico OWNER TO postgres;
 
 --
 -- TOC entry 266 (class 1259 OID 53583)
@@ -884,7 +858,7 @@ CREATE SEQUENCE bienestar_medico.valoracion_interpersonal_id_seq
     CACHE 1;
 
 
-ALTER TABLE bienestar_medico.valoracion_interpersonal_id_seq OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.valoracion_interpersonal_id_seq OWNER TO postgres;
 
 --
 -- TOC entry 267 (class 1259 OID 53585)
@@ -909,4 +883,4 @@ CREATE TABLE bienestar_medico.valoracion_interpersonal (
 );
 
 
-ALTER TABLE bienestar_medico.valoracion_interpersonal OWNER TO postgres;
+-- ALTER TABLE bienestar_medico.valoracion_interpersonal OWNER TO postgres;
